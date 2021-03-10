@@ -1,6 +1,3 @@
-# bioinformatics-general_commands
-One line commands for bioinformatics tasks
-
 # Command-line utilities in Bioinformatics
 
 Since the begin of my thesis internship I discovered and applied several different commands in order to get done some tasks in bioinformatics. Now I'm a PhD student and still I'm learning some new fancy ways to execute bioinformatics tasks. Here are some of the commands I've been using. The page is constantly being updated.
