@@ -1,6 +1,6 @@
 # Command-line utilities in Bioinformatics
 
-Since the begin of my thesis internship I discovered and applied several different commands in order to get done some tasks in bioinformatics. Now I'm a PhD student and still I'm learning some new fancy ways to execute bioinformatics tasks. Here are some of the commands I've been using. The page is constantly being updated.
+Since the beginning of my thesis internship I discovered and applied several different commands in order to get done some tasks in bioinformatics. Now I'm a PhD student and still I'm learning some new fancy ways to execute bioinformatics tasks. Here are some of the commands I've been using. The page is periodically being updated.
 I added also some common configurations of commands in NGS analysis.
 
 ## OS
