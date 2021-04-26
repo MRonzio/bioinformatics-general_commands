@@ -79,7 +79,25 @@ perl -ne 'print if $SEEN{$_}++' < file
 ```
 
 ## NGS
+Check roughly read length of a FASTQ file
+```bash
+head -20 file.fastq | awk 'NR%4==2{print length($0)}'
+```
 
+Check roughly read length of a FASTQ.gz file
+```bash
+zcat file.fastq.gz | head -20 | awk 'NR%4==2{print length($0)}'
+```
+
+Check roughly read coverage of a FASTQ file
+```bash
+cat file.fastq | awk 'END {print NR/4}'
+```
+
+Check roughly read coverage of a FASTQ.gz file
+```bash
+zcat file.fastq.gz  | awk 'END {print NR/4}'
+```
 Convert SAM to BAM
 
 ```bash
