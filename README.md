@@ -98,13 +98,18 @@ Check roughly read coverage of a FASTQ.gz file
 ```bash
 zcat file.fastq.gz  | awk 'END {print NR/4}'
 ```
+Keep n bp for each read, if longer than n in paired-ends
+```bash
+cutadapt -l 35 --cores=12 -o R1-35bp.fq.gz -p R2-35bp.fq.gz R1.fq.gz R2.fq.gz 
+```
+
 Convert SAM to BAM
 
 ```bash
 samtools view -S -b -o outfile.bam infile.sam
 ```
 
-Peak call with MACS2
+ChIP-seq peak call with MACS2
 genome: mm for mouse or hs for human.
 
 ```bash
