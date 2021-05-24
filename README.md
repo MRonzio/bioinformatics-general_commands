@@ -127,6 +127,11 @@ grep -v "hap" GTF_REFSEQ.dms | awk -F "\t" '{print $1,$9}' OFS="\t" | uniq | sor
 awk 'NR==FNR {c[$1,$2]++; next} c[$1,$9]' GTF_REFSEQ_2.dms GTF_REFSEQ.dms > out
 ```
 
+Filter column by second line matching 
+```bash
+cut -f 1,$(echo $(sed '2q;d' big_table.txt | tr "\t" "\n" | cat -n | grep match_criteria | awk '{print $1}' | sed 's/^\s*//' | tr "\n" "," | sed '$ s/,$//g')) big_table.txt > big_table_filtered.txt
+```
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
