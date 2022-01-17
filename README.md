@@ -39,7 +39,13 @@ Copy all bed files that have row number higher than 10000 to another folder.
 for f in *.bed; do lines=$(cat "$f" | wc -l); if [ $lines -gt 10000 ] ; then echo "moving $f with $lines lines to path/"; cp $f path/ ; fi; done | wc -l
 ```
 
-convert file to upper case, reconvert CHR to lovercase
+Sum all the bases of a bed file
+
+```bash
+cat file.bed | awk -F'\t' 'BEGIN{SUM=0}{ SUM+=$3-$2 }END{print SUM}'
+```
+
+convert file to upper case, reconvert CHR to lowercase
 
 ```bash
 tr [:lower:] [:upper:] < input.file > output.file && sed -i -e 's/CHR/chr/g' output.file
