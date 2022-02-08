@@ -111,7 +111,7 @@ cutadapt -l 35 --cores=12 -o R1-35bp.fq.gz -p R2-35bp.fq.gz R1.fq.gz R2.fq.gz
 
 Convert JASPAR matrices to simple FASTA format.
 ```bash
-cat JASPAR2022_CORE_redundant_pfms_jaspar.txt | tr -d '[]' | awk '{OFS=FS=t} /^>/ {print -bash; next} {sub(/^[ACGT]+/, )}1' > jaspar_2022_R.wil
+cat JASPAR2022_CORE_redundant_pfms_jaspar.txt | tr -d '[]' | awk '{OFS=FS="\t"} /^>/ {print $0; next} {sub(/^[ACGT]+/, "")}1' > jaspar_2022_R.wil
 ```
  
 Convert SAM to BAM
